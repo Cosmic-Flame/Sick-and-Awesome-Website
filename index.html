@@ -1,59 +1,95 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Metadata for character encoding and viewport settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Inkluderer en stilark for normalisering for å sikre at nettstedet ser likt ut på alle nettlesere -->
+
+    <!-- External stylesheet for normalization -->
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
-    <!-- Inkluderer ikon-stiler for ikoner fra FontAwesome -->
+
+    <!-- Font awesome stylesheets -->
     <link href="css/font/css/fontawesome.css" rel="stylesheet">
     <link href="css/font/css/brands.css" rel="stylesheet">
     <link href="css/font/css/solid.css" rel="stylesheet">
-    <!-- Inkluderer nettstedets egen stilark -->
+
+    <!-- Main stylesheet for the site -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <!-- Website title -->
     <title>Shoe4You</title>
 </head>
+
 <body>
-    <!-- Hovedbeholderen for nettstedet -->
+    <!-- Main grid container for the site -->
     <div id="grid-container">
+
+        <!-- Site header containing navigation -->
         <header>
+
+            <!-- Main navigation -->
             <nav>
+                <!-- Navigation icons and logo -->
                 <div>
-                    <!-- Ikon for navigasjonsmenyen -->
+                    <!-- Menu icon (for mobile view) -->
                     <i id="borgir" class="fa-solid fa-bars"></i>
-                    <!-- Ikon for søkefunksjonen -->
+                    <!-- Search icon -->
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <!-- Logo for nettstedet -->
+                    <!-- Site logo -->
                     <a href="#" id="logo">Shoe4You</a>
-                    <!-- Ikon for brukerprofilen -->
+                    <!-- User and cart icons -->
                     <i class="fa-solid fa-user"></i>
-                    <!-- Ikon for handlekurven -->
                     <i class="fa-solid fa-cart-shopping"></i>
                 </div>
+
+                <!-- Navigation links -->
                 <ul class="navbar">
-                    <!-- Navigasjonsmeny med lenker -->
                     <li><a href="#">Home</a></li>
                     <li><a href="produkt.html">Products</a></li>
                     <li><a href="#services">Services</a></li>
                 </ul>
             </nav>
 
+            <aside id="sidebar" class="sidebar">
+                <ul>
+                    <li><a href="#kategori-nyhet">Nyhet</a></li>
+                    <li><a href="#kategori-menn">Menn</a></li>
+                    <li><a href="#kategori-kvinner">Kvinner</a></li>
+                    <li><a href="#">Barn</a></li>
+                    <li><a href="#">Sport</a></li>
+                    <li><a href="#">Fritid</a></li>
+                    <li><a href="#">Formelt</a></li>
+                    <li><a href="#">Støvler</a></li>
+                    <li><a href="#">Fest</a></li>
+                    <li><a href="#">Komfort</a></li>
+                    <li><a href="#">Friluftsliv</a></li>
+                    
+                </ul>
+            </aside>
+
+            <!-- Main headline section -->
             <section>
                 <h1>Nyhet!</h1>
             </section>
         </header>
+
+        <!-- Main content of the site -->
         <main>
-            <!-- Seksjon 1 med en overskrift og en beskrivelse -->
-            <section class="flex-section nyhet" style="background-color: #fff;">
-                <img src="img/Arctic Stride.jpg" alt="Grå sko med gule trekk">
-                <p>https://pixabay.com/photos/shoes-sports-feet-foot-346986/</p>
+
+            <!-- Feature section for Arctic Stride product -->
+            <section id="kategori-nyhet" class="flex-section nyhet">
+                <img src="img/ArcticStride.jpg" alt="Grå sko med gule trekk">
                 <section>
+                    <p>https://pixabay.com/photos/shoes-sports-feet-foot-346986/</p>
                     <h2>Arctic Stride</h2>
                     <p>ArcticStride sportsko er enestående sko designet for å gi en overlegen ytelse og komfort i et sporty miljø. </p>
                 </section>
             </section>
-            <!-- Seksjon 2 med en overskrift og en beskrivelse (denne er høyrejustert) -->
-            <section class="flex-section right">
+
+            <!-- Popular among men section -->
+            <section id="kategori-menn" class="flex-section">
                 <h2>Populært blant menn</h2>
                 <img src="img/Herresko.jpg" alt="Blå joggesko med gul bakgrunn">
                 <section>
@@ -61,9 +97,22 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu</p>
                 </section>
             </section>
-            <!-- Seksjon 3 for tjenester med flere artikler -->
+
+            <!-- Popular among women section -->
+            <section id="kategori-kvinner" class="flex-section">
+                <h2>Populært blant kvinner</h2>
+                <img src="img/Herresko.jpg" alt="Blå joggesko med gul bakgrunn">
+                <section>
+                    <h2>Lorem ipsum</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu</p>
+                </section>
+            </section>
+
+            <!-- Services section -->
             <section id="services">
                 <h2>Services</h2>
+
+                <!-- Individual service articles -->
                 <article>
                     <h3>Lorem ipsum</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
@@ -78,24 +127,25 @@
                 </article>
             </section>
         </main>
+
+        <!-- Footer of the site -->
         <footer>
         </footer>
     </div>
-    <!-- JavaScript-kode for å gjøre navigasjonsmenyen responsiv -->
+
+    <!-- JavaScript for responsive navigation -->
     <script>
-        // Finn navigasjonsmenyen
-        let x = document.querySelector(".navbar")
-        // Legg til en hendelseslytter for klikk p� menyikonet (borgir)
+        let x = document.querySelector(".navbar");
         document.getElementById("borgir").addEventListener("click", (e) => {
-            // Sjekk om navigasjonsmenyen allerede har klassen "responsive"
             if (x.className === "navbar") {
-                // Hvis ikke, legg til klassen for responsiv meny
                 x.className += " responsive";
-            } else {
-                // Hvis den allerede har klassen, fjern den for å gjøre menyen skjult
-                x.className = "navbar"
+            }
+
+            else {
+                x.className = "navbar";
             }
         })
     </script>
 </body>
+
 </html>

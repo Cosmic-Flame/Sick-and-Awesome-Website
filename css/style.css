@@ -1,68 +1,91 @@
-/* Setter standard skrifttype for hele nettsiden */
+
+/* Global styles */
+/* Set default font for the entire website */
 body {
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    background-color: #6D99C1;
 }
 
-/* Definerer et grid-container som inneholder header, main og footer */
+/* Grid container definition covering header, main, and footer */
 #grid-container {
     display: grid;
     grid-template-areas: "header" "main" "footer";
 }
 
+/* Icon spacing */
 .fa-solid {
     padding: 0 1rem;
 }
 
-/* Styler header-seksjonen */
+/* Header styles */
 header {
     font-size: 1.5rem;
     font-weight: 600;
     grid-area: header;
 }
 
-    /* Gjør navigasjonselementene i header til flexbokser som er justert mellomrom og til høyre */
+    /* Navigation bar within header */
     header nav {
         display: flex;
         justify-content: space-evenly;
         position: relative;
         color: #fff;
         background-color: #6D99C1;
-        width: 100%;
         padding: 1rem;
     }
 
+    /* Central headline section within header */
     header section {
         display: flex;
         padding: 1rem;
         justify-content: center;
+        background-color: #fff;
     }
 
-.nyhet section {
+main section {
     text-align: center;
-    color: #000;
+}
+
+#kategori-nyhet {
+    text-align: center;
     background-color: #fff;
 }
 
-    .nyhet section p {
-        text-align: justify;
-    }
-
-    .nyhet p {
+    /* Styling for news section */
+    .nyhet section {
+        text-align: center;
         color: #000;
+        background-color: #fff;
     }
 
-/* Gjør logo-lenken uten understrek */
+        /* Paragraph text alignment within news section */
+        .nyhet section p {
+            text-align: center;
+        }
+
+        /* Color settings for paragraphs within news section */
+        .nyhet p {
+            color: #000;
+        }
+
+
+/* Logo styling */
 #logo {
     text-decoration: none;
     color: #fff;
 }
 
-/* Skjuler standard navigasjonsmeny */
+#sidebar {
+    display: none;
+}
+
+/* Navbar hidden by default (for mobile view) */
 .navbar {
     display: none;
 }
 
-/* Styler responsiv navigasjonsmeny */
+/* Responsive navbar styles for mobile view */
 .responsive {
     display: flex;
     flex-direction: column;
@@ -75,6 +98,7 @@ header {
     list-style: none;
 }
 
+    /* Link styles within responsive navbar */
     .responsive a {
         color: #fff;
         display: inline-block;
@@ -82,42 +106,33 @@ header {
         text-decoration: none;
     }
 
-/* Styler en svart knapp */
-.black-btn {
-    display: inline-block;
-    padding: 1rem;
-    text-decoration: none;
-    background-color: #171717;
-    color: #fff;
-    border-radius: 5px;
-    font-weight: 400;
-}
-
-/* Styler main-seksjonen i gridet */
+/* Main content area */
 main {
     grid-area: main;
 }
 
-    /* Setter bredden til bilder inni main-seksjonen til 100% */
+    /* Image scaling within the main section */
     main section img {
         width: 100%;
     }
 
+/* Flex section styling */
 .flex-section {
     background-color: #6D99C1;
     color: #fff;
 }
 
+    /* Inner sections within flex sections */
     .flex-section section {
         padding: 1rem;
     }
 
-/* Styler footer-seksjonen i gridet */
+/* Footer area */
 footer {
     grid-area: footer;
 }
 
-/* Styler tjeneste-seksjonen med flexbokser og bakgrunnsfarge */
+/* Service section styling */
 #services {
     display: flex;
     flex-direction: row;
@@ -128,59 +143,68 @@ footer {
     justify-content: space-around;
 }
 
+    /* Service section header */
     #services h2 {
         width: 100%;
         text-align: center;
     }
 
+    /* Individual articles within services section */
     #services article {
         max-width: 300px;
         width: 100%;
         min-width: 200px;
     }
 
-/* Mediestørrelsesregel for skjermer som er bredere enn 600px */
+/* Media queries for screen widths above 600px */
 @media only screen and (min-width: 600px) {
-    /* Endrer grid-malen for bredere skjermer */
+
     #grid-container {
-        grid-template-areas: "header header header" "main main main" "footer footer footer";
+        grid-template-areas:
+            "sidebar header header header"
+            "sidebar main main main"
+            "sidebar footer footer footer";
     }
 
-    /* Viser den skjulte navigasjonsmenyen og skjuler menyikoner */
-    .navbar {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
+    #sidebar {
+        display: grid;
+        grid-area: sidebar;
+        color: #fff;
+        background-color: #6D99C1;
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+
+        #sidebar ul {
         list-style: none;
-        margin: 0;
-    }
-
-    /* Skjuler menyikoner i header */
-    #borgir, .fa-magnifying-glass {
-        display: none;
-    }
-
-    /* Gjør flex-seksjoner som viser bilder og tekst ved siden av hverandre med mellomrom */
-    .flex-section {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-        /* Reduserer bildenes bredde til 50% i flex-seksjoner */
-        .flex-section img {
-            width: 50%;
         }
 
-        /* Legger til litt mellomrom og justering i flex-seksjoner */
-        .flex-section section {
+            #sidebar li {
             padding: 1rem;
-            width: 40%;
-            align-self: center;
-        }
+            }
 
-    /* Endrer rekkefølgen av bilde og tekst i høyrejusterte seksjoner */
-    .right img {
-        order: 1;
+                #sidebar li a {
+                    color: #fff;
+                    text-decoration: none;
+                }
+
+    .flex-section img {
+        width: 50%;
     }
+
+    .flex-section .nyhet {
+        text-align: center;
+    }
+
+    .responsive {
+        background-color: #6D99C1;
+        width: 20%;
+        text-align: left;
+    }
+    
 }
