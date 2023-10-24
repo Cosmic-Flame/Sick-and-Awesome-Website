@@ -3,14 +3,7 @@
 /* Set default font for the entire website */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
-    background-color: #6D99C1;
-}
-
-/* Grid container definition covering header, main, and footer */
-#grid-container {
-    display: grid;
-    grid-template-areas: "header" "main" "footer";
+    background-color: #ebebeb;
 }
 
 /* Icon spacing */
@@ -20,51 +13,83 @@ body {
 
 /* Header styles */
 header {
+    z-index: 1;
+    display: grid;
     font-size: 1.5rem;
     font-weight: 600;
-    grid-area: header;
 }
 
     /* Navigation bar within header */
     header nav {
+        z-index: 1;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         position: relative;
         color: #fff;
         background-color: #6D99C1;
         padding: 1rem;
     }
 
+        header nav div {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 800px;
+        }
+
+            header nav div input {
+                display: none;
+            }
+
     /* Central headline section within header */
     header section {
         display: flex;
         padding: 1rem;
         justify-content: center;
-        background-color: #fff;
+        background-color: #ebebeb;
     }
 
 #kategori-nyhet {
     text-align: center;
-    background-color: #fff;
+    background-color: #ebebeb;
 }
 
-    /* Styling for news section */
-    .nyhet section {
+#kategori-arctic-stride {
+    text-align: center;
+    background-color: #ebebeb;
+}
+
+/* Styling for news section */
+.nyhet section {
+    text-align: center;
+    color: #000;
+    background-color: #ebebeb;
+}
+
+    /* Paragraph text alignment within news section */
+    .nyhet section p {
         text-align: center;
-        color: #000;
-        background-color: #fff;
     }
 
-        /* Paragraph text alignment within news section */
-        .nyhet section p {
-            text-align: center;
-        }
+    /* Color settings for paragraphs within news section */
+    .nyhet p {
+        color: #000;
+    }
+.product-section section {
+    text-align: center;
+    color: #000;
+    background-color: #ebebeb;
+}
 
-        /* Color settings for paragraphs within news section */
-        .nyhet p {
-            color: #000;
-        }
+    /* Paragraph text alignment within news section */
+    .product-section section p {
+        text-align: center;
+    }
 
+    /* Color settings for paragraphs within news section */
+    .product-section p {
+        color: #000;
+    }
 
 /* Logo styling */
 #logo {
@@ -74,6 +99,7 @@ header {
 
 #sidebar {
     display: none;
+    position: absolute;
 }
 
 /* Navbar hidden by default (for mobile view) */
@@ -89,7 +115,7 @@ header {
     background-color: #6C6C6C;
     margin: 0;
     padding: 0;
-    top: 40px;
+    top: 60px;
     width: 100%;
     list-style: none;
 }
@@ -104,7 +130,8 @@ header {
 
 /* Main content area */
 main {
-    grid-area: main;
+    display: grid;
+    position: relative;
 }
 
     main section {
@@ -116,6 +143,37 @@ main {
             width: 100%;
         }
 
+#pricetag{
+    display: flex;
+    width: 100%;
+    background-color: #6D99C1;
+    color: #fff;
+    align-items: center;
+    justify-content: space-around;
+}
+
+    #pricetag p {
+        display: flex;
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    #pricetag a {
+        display: flex;
+        font-size: 2rem;
+        text-decoration: none;
+        color: #fff;
+    }
+
+.title-section {
+    background-color: #ebebeb;
+}
+
+    .title-section h1 {
+        font-weight: 600;
+    }
+
 /* Flex section styling */
 .flex-section {
     background-color: #6D99C1;
@@ -124,12 +182,17 @@ main {
 
     /* Inner sections within flex sections */
     .flex-section section {
-        padding: 1rem;
+        padding: 1rem 1rem 1rem 0;
     }
+
+.women {
+    background-color: #ebebeb;
+    color: #000;
+}
 
 /* Footer area */
 footer {
-    grid-area: footer;
+    display: grid;
 }
 
 /* Service section styling */
@@ -159,16 +222,27 @@ footer {
 /* Media queries for screen widths above 600px */
 @media only screen and (min-width: 600px) {
 
-    #grid-container {
-        grid-template-areas:
-            "sidebar header"
-            "sidebar main"
-            "sidebar footer";
+    header {
+        margin-left: 12rem;
+    }
+
+        header nav {
+            border-bottom: 1px solid #000;
+        }
+
+            header nav div input {
+                display: flex;
+                border-radius: 50px;
+                margin-right: 1rem;
+            }
+
+    main {
+        margin-left: 12rem;
     }
 
     #sidebar {
-        display: grid;
-        grid-area: sidebar;
+        width: 12rem;
+        display: flex;
         color: #fff;
         background-color: #6D99C1;
         height: 100%;
@@ -178,6 +252,9 @@ footer {
         left: 0;
         overflow-x: hidden;
         padding-top: 20px;
+        font-weight: 600;
+        font-size: 1.5rem;
+        border-right: 1px solid #000;
     }
 
         #sidebar ul {
@@ -193,18 +270,35 @@ footer {
                     text-decoration: none;
                 }
 
-    .flex-section img {
-        width: 50%;
+    #pricetag {
+        display: flex;
+        width: 100%;
+        justify-content: center;
     }
 
-    .flex-section .nyhet {
-        text-align: center;
+    #pricetag a {
+        padding-left: 5rem;
+        font-size: 3rem;
+        text-decoration: none;
+    }
+
+    .flex-section img {
+        width: 40%;
+    }
+
+    .product-section a img {
+        margin-top: 1rem;
     }
 
     .responsive {
         background-color: #6D99C1;
         width: 20%;
         text-align: left;
+    }
+
+    footer {
+        margin-left: 12rem;
+        height: 100%;
     }
     
 }
