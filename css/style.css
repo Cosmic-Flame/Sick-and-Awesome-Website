@@ -296,6 +296,11 @@ footer {
         text-align: left;
     }
 
+    #product-description p {
+        padding-left: 15%;
+        text-align: justify;
+    }
+
     footer {
         margin-left: 12rem;
         height: 100%;
