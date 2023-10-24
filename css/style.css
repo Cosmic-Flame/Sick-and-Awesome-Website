@@ -28,7 +28,7 @@ header {
     /* Navigation bar within header */
     header nav {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
         position: relative;
         color: #fff;
         background-color: #6D99C1;
@@ -42,10 +42,6 @@ header {
         justify-content: center;
         background-color: #fff;
     }
-
-main section {
-    text-align: center;
-}
 
 #kategori-nyhet {
     text-align: center;
@@ -111,10 +107,14 @@ main {
     grid-area: main;
 }
 
-    /* Image scaling within the main section */
-    main section img {
-        width: 100%;
+    main section {
+        text-align: center;
     }
+
+        /* Image scaling within the main section */
+        main section img {
+            width: 100%;
+        }
 
 /* Flex section styling */
 .flex-section {
@@ -161,9 +161,9 @@ footer {
 
     #grid-container {
         grid-template-areas:
-            "sidebar header header header"
-            "sidebar main main main"
-            "sidebar footer footer footer";
+            "sidebar header"
+            "sidebar main"
+            "sidebar footer";
     }
 
     #sidebar {
