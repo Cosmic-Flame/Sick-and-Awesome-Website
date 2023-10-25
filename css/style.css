@@ -11,6 +11,11 @@ body {
     padding: 0 1rem;
 }
 
+.fa-cart-shopping {
+    color: #fff;
+
+}
+
 /* Header styles */
 header {
     z-index: 1;
@@ -166,6 +171,34 @@ main {
         color: #fff;
     }
 
+#price-total {
+    background-color: #6D99C1;
+    color: #fff;
+}
+
+    #price-total p, #price-total a {
+        font-size: 2rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    #price-total .break-line {
+        border-bottom: 2px solid #fff;
+        width: 50%;
+        margin: 1rem auto;
+    }
+
+#btnBetal {
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+    background-color: #fff;
+    color: #6D99C1;
+    border-radius: 5px;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
 .title-section {
     background-color: #ebebeb;
 }
@@ -193,6 +226,7 @@ main {
 /* Footer area */
 footer {
     display: grid;
+    background-color: #6D99C1;
 }
 
 /* Service section styling */
@@ -219,6 +253,60 @@ footer {
         min-width: 200px;
     }
 
+#shopping-cart {
+    color: #000;
+    display: flex;
+    background-color: #ebebeb;
+    justify-content: center;
+}
+
+    #shopping-cart img {
+        height: 4rem;
+        width: auto;
+    }
+    
+    #shopping-cart ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+        #shopping-cart ul li {
+            padding: 0 1rem;
+            font-size: 2rem;
+            margin: 0;
+        }
+
+            #shopping-cart ul .amount-box {
+                font-weight: 600;
+                border: 2px solid #000
+            }
+
+#contact-us {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: #fff;
+    background-color: #6D99C1;
+    padding: 1rem;
+    justify-content: space-around;
+}
+
+    /* Contact us section header */
+    #contact-us h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Individual articles within the contact us section */
+    #contact-us article {
+        max-width: 300px;
+        width: 100%;
+        min-width: 200px;
+    }
+
 /* Media queries for screen widths above 600px */
 @media only screen and (min-width: 600px) {
 
@@ -234,6 +322,10 @@ footer {
                 display: flex;
                 border-radius: 50px;
                 margin-right: 1rem;
+            }
+
+            header nav ul .kategori-link {
+                display: none;
             }
 
     main {
