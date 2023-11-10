@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="nb">
+
+<head>
+    <!-- Metadata for character encoding and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- External stylesheet for normalization -->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
+
+    <!-- Font awesome stylesheets -->
+    <link href="css/font/css/fontawesome.css" rel="stylesheet">
+    <link href="css/font/css/brands.css" rel="stylesheet">
+    <link href="css/font/css/solid.css" rel="stylesheet">
+
+    <!-- Main stylesheet for the site -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <!-- Website title -->
+    <title>Shoe4You</title>
+</head>
+
+<body>
+    <!-- Main grid container for the site -->
+    <div id="grid-container">
+
+        <!-- Site header containing navigation -->
+        <header>
+
+            <!-- Main navigation -->
+            <nav>
+                <!-- Navigation icons and logo -->
+                <div>
+                    <!-- Menu icon (for mobile view) -->
+                    <i id="borgir" class="fa-solid fa-bars"></i>
+                    <!-- Search icon -->
+                    <label for="searchbar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </label>
+                    <input id="searchbar" type="text" name="searchbar" >
+                    <!-- Site logo -->
+                    <a href="index.html" id="logo">Shoe4You</a>
+                    <!-- User and cart icons -->
+                    <i class="fa-solid fa-user"></i>
+                    <a href="handlekurv.html">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                </div>
+
+                <!-- Navigation links -->
+                <ul class="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produkt.html">Products</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li class="kategori-link"><a href="#">Kategorier</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <aside id="sidebar" class="sidebar">
+            <ul>
+                <li><a href="#kategori-nyhet">Nyhet</a></li>
+                <li><a href="#kategori-menn">Menn</a></li>
+                <li><a href="#kategori-kvinner">Kvinner</a></li>
+                <li><a href="#">Barn</a></li>
+                <li><a href="#">Sport</a></li>
+                <li><a href="#">Fritid</a></li>
+                <li><a href="#">Formelt</a></li>
+                <li><a href="#">Støvler</a></li>
+                <li><a href="#">Fest</a></li>
+                <li><a href="#">Komfort</a></li>
+                <li><a href="#">Friluftsliv</a></li>
+
+            </ul>
+        </aside>
+
+        <!-- Main content of the site -->
+        <main>
+
+            <!-- Main headline section -->
+            <section class="title-section">
+                <h1>Analyse</h1>
+            </section>
+
+            <section id="kategori-analyse">
+                <section>
+                    <!--Seksjon for analyse av lighthouse-->
+                    <h2>Lighthouse</h2>
+                    <img src="img/lighthouse_result.png" alt="Resultater fra lighthouse">
+
+                    <h3>Performance</h3>
+                    <p>Under Performance var det to hoved ting den klaget på:</p>
+                    <p>1. Image elements do not have explicit width and height <br>
+                        2. Serve static assets with an efficient cache policy</p>
+                    <p>Dette kommer av at jeg bruker bilder med % width for <br>
+                    interaktivitet. Jeg har høy score på Performance så det <br>
+                    er kanskje ikke veldig viktig å fikse hvis det blir vanskelig.</p>
+                    
+                    <h3>Accessibility</h3>
+                    <p>Accessibility var det jeg fikk værst score på. Igjen var det to faktorer:</p>
+                    <p>1. Background and foreground colors do not have a sufficient contrast ratio. <br>
+                        2. Links do not have a discernible name</p>
+                    <p>Dette kommer av at jeg ikke ville ha tekst i headeren. Dette kan <br>
+                    fikses bra, men må kanskje endre designkonseptet litt.</p>
+
+                    <h3>Best Practices</h3>
+                    <p>Jeg fikk en score av 100 på Best Practices. Det var ingen klager.</p>
+
+                    <h3>SEO</h3>
+                    <p>SEO delen klaget på at jeg ikke hadde meta description noe <br>
+                    som er forventet, ettersom at jeg ikke har kommet dit enda.</p>
+
+                    <h3>Konklusjon</h3>
+                    <p>Totalt sett er min score ganske bra. Det eneste under 90 var <br>
+                    Accessibility. Der var det for det meste klage på dårlig kontrast, <br>
+                    noe som ikke burde være for vanskelig å fikse. Jeg er ganske <br>
+                    fornøyd med resultatene.</p>
+                </section>
+                <!--Seksjon for Webaim analyse-->
+                <section>
+                    <h2>Webaim</h2>
+                    <img src="img/wave_results.png" alt="Resultater fra wave.Webaim">
+                    <p>Webaim ga klager innen to kategorier: Error, og kontrast error</p>
+
+                    <h3>Empty label</h3>
+                    <p>Den første error klagen er om at min form (input) ikke har et label. <br>
+                    Dette er en relativt lett fiks, der jeg bare trenger å legge til et label.</p>
+                    <img src="img/old_header.png" alt="Gamle header uten titler for søkefelt eller handlekurv">
+
+                    <h3>Empty link</h3>
+                    <p>Den andre klagen var at jeg hadde en tom link i headeren (handlekurven). <br>
+                    Dette er også en lett fiks, men det kan ødelegge litt utseende til headeren</p>
+
+                    <h3>Dårlig kontrast</h3>
+                    <p>Mye likt som lighthouse, webaim klagde også på at det var dårlig <br>
+                    kontrast mellom bakgrunn og forgrunn. Den ga flere eksempler hvor <br>
+                    hvit tekst på blå bakgrunn var dårlig.</p>
+                    <img src="img/dårlig_kontrast.png" alt="Et bilde som viser dårlig kontrast mellom blå og hvit">
+
+                    <h3>Konklusjon</h3>
+                    <p>Webaim ga veldig mye tilbakemeldig lik lighthouse. Det meste <br>
+                    var klaging på manglede label og dårlig kontrast, noe som også <br>
+                    ble påpekt av lighthouse. Dermed var webaim fortsatt nyttig, fordi <br>
+                    den hadde et bra UI som viste lett og tydelig hva og hvor <br>
+                    problemet var.</p>
+                </section>
+                <!--Seksjon for ChatGPT analyse-->
+                <section>
+                    <h2>ChatGPT</h2>
+                    <img src="img/chatgpt_result.png" alt="ChatGPT svarer med en analyse på nettsiden.">
+                    <p>Jeg spurte ChatGPT om å analysere min nettside med tanke på UU (UD på engelsk) og SEO. <br>
+                    ChatGPT returnerte en liste med punkter man burde passe på:</p>
+                    <section class="analysis-list">
+                        <ol>
+                            <li>Accessibility</li>
+                            <li>Semantic HTML</li>
+                            <li>Responsive Design</li>
+                            <li>Meta Tags and Title</li>
+                            <li>Headings and Content</li>
+                            <li>Internal Linking</li>
+                            <li>URL structure</li>
+                            <li>Image Optimization</li>
+                            <li>Loading Speed and Scripts</li>
+                            <li>Mobile Optimization</li>
+                        </ol>
+                    </section>
+                </section>
+            </section>
+
+        </main>
+
+        <!-- Footer of the site -->
+        <footer>
+            <!-- Contact us section -->
+            <section id="contact-us">
+                <h2>Contact us</h2>
+
+                <article>
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                </article>
+                <article>
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                </article>
+                <article>
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                </article>
+            </section>
+        </footer>
+    </div>
+
+    <!-- JavaScript for responsive navigation -->
+    <script>
+        let x = document.querySelector(".navbar");
+        document.getElementById("borgir").addEventListener("click", (e) => {
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            }
+
+            else {
+                x.className = "navbar";
+            }
+        })
+    </script>
+</body>
+
+</html>

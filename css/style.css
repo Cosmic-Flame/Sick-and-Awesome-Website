@@ -59,9 +59,23 @@ header {
     background-color: #ebebeb;
 }
 
+#kategori-analyse {
+    text-align: center;
+    background-color: #ebebeb;
+    color: #000;
+}
+
+    #kategori-analyse img {
+        max-width: 60%;
+    }
+
 #kategori-arctic-stride {
     text-align: center;
     background-color: #ebebeb;
+}
+
+.analysis-list li {
+    list-style: none;
 }
 
 /* Styling for news section */
