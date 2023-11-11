@@ -6,6 +6,10 @@ body {
     background-color: #ebebeb;
 }
 
+a {
+    color: #000;
+}
+
 /* Icon spacing */
 .fa-solid {
     padding: 0 1rem;
@@ -14,6 +18,11 @@ body {
 .fa-cart-shopping {
     color: #fff;
 
+}
+
+.shopping-cart {
+    color: #fff;
+    text-decoration: none;
 }
 
 /* Header styles */
@@ -31,7 +40,7 @@ header {
         justify-content: center;
         position: relative;
         color: #fff;
-        background-color: #6D99C1;
+        background-color: #406a91;
         padding: 1rem;
     }
 
@@ -43,6 +52,14 @@ header {
         }
 
             header nav div input {
+                display: none;
+            }
+
+            #search {
+                display: none;
+            }
+
+            #shop {
                 display: none;
             }
 
@@ -59,14 +76,16 @@ header {
     background-color: #ebebeb;
 }
 
-#kategori-analyse {
-    text-align: center;
+#kategori-analyse section {
+    margin:0.5rem;
+    text-align: justify;
     background-color: #ebebeb;
     color: #000;
+    align-self: center;
 }
 
     #kategori-analyse img {
-        max-width: 60%;
+        max-width: 100%;
     }
 
 #kategori-arctic-stride {
@@ -77,6 +96,15 @@ header {
 .analysis-list li {
     list-style: none;
 }
+
+#table {
+    margin: auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 0.2rem;
+  }
 
 /* Styling for news section */
 .nyhet section {
@@ -165,7 +193,7 @@ main {
 #pricetag{
     display: flex;
     width: 100%;
-    background-color: #6D99C1;
+    background-color: #406a91;
     color: #fff;
     align-items: center;
     justify-content: space-around;
@@ -186,7 +214,7 @@ main {
     }
 
 #price-total {
-    background-color: #6D99C1;
+    background-color: #406a91;
     color: #fff;
 }
 
@@ -223,7 +251,7 @@ main {
 
 /* Flex section styling */
 .flex-section {
-    background-color: #6D99C1;
+    background-color: #406a91;
     color: #fff;
 }
 
@@ -240,7 +268,7 @@ main {
 /* Footer area */
 footer {
     display: grid;
-    background-color: #6D99C1;
+    background-color: #406a91;
 }
 
 /* Service section styling */
@@ -303,7 +331,7 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     color: #fff;
-    background-color: #6D99C1;
+    background-color: #406a91;
     padding: 1rem;
     justify-content: space-around;
 }
@@ -338,6 +366,14 @@ footer {
                 margin-right: 1rem;
             }
 
+            #search {
+                display: contents;
+            }
+
+            #shop {
+                display: contents;
+            }
+
             header nav ul .kategori-link {
                 display: none;
             }
@@ -350,7 +386,7 @@ footer {
         width: 12rem;
         display: flex;
         color: #fff;
-        background-color: #6D99C1;
+        background-color: #406a91;
         height: 100%;
         position: fixed;
         z-index: 1;
@@ -375,6 +411,14 @@ footer {
                     color: #fff;
                     text-decoration: none;
                 }
+    
+    #kategori-analyse section {
+        text-align: center;
+    }
+
+        #kategori-analyse img {
+            max-width: 60%;
+        }
 
     #pricetag {
         display: flex;
@@ -397,7 +441,7 @@ footer {
     }
 
     .responsive {
-        background-color: #6D99C1;
+        background-color: #406a91;
         width: 20%;
         text-align: left;
     }

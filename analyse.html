@@ -37,15 +37,15 @@
                     <i id="borgir" class="fa-solid fa-bars"></i>
                     <!-- Search icon -->
                     <label for="searchbar">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span id="search">search</span><i class="fa-solid fa-magnifying-glass"></i>
                     </label>
                     <input id="searchbar" type="text" name="searchbar" >
                     <!-- Site logo -->
                     <a href="index.html" id="logo">Shoe4You</a>
                     <!-- User and cart icons -->
                     <i class="fa-solid fa-user"></i>
-                    <a href="handlekurv.html">
-                        <i class="fa-solid fa-cart-shopping"></i>
+                    <a href="handlekurv.html" class="shopping-cart">
+                        <span id="shop">shop</span><i class="fa-solid fa-cart-shopping"></i>
                     </a>
                 </div>
 
@@ -54,7 +54,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="produkt.html">Products</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li class="kategori-link"><a href="#">Kategorier</a></li>
+                    <li class="kategori-link"><a href="#">Categories</a></li>
                 </ul>
             </nav>
 
@@ -83,6 +83,15 @@
             <!-- Main headline section -->
             <section class="title-section">
                 <h1>Analyse</h1>
+                <p>Dette er siden for analysen av nettbutikken.</p>
+
+                <h2>Nøkkelord:</h2>
+                <p>Herresko, joggesko, sko, nike, sneakers</p>
+                <p>Jeg valgte disse nøkkelordene fordi de var generelt <br>
+                gode i Google Trends. Spesielt sko og nike var aktive <br>
+                nøkkelord. Jeg valgte alle sko som er relevante for <br>
+                nettbutikken min. Jeg har også valgt å bruke norske <br>
+                ord fordi nettsiden er på norsk.</p>
             </section>
 
             <section id="kategori-analyse">
@@ -167,6 +176,61 @@
                             <li>Mobile Optimization</li>
                         </ol>
                     </section>
+                    <p>De fleste punktene nevnte ChatGPT at jeg klarte bra. Derimot var det <br>
+                    et par ting den ville at jeg skulle forbedre. Som de andre, meldte GPT at <br>
+                    burde øke kontrasten mellom forgrunn og bakgrunn. GPT nevnte også at <br>
+                    nettsiden burde være navigerbar med tastatur, og at jeg ikke har nok <br>
+                    "meta descriptions".</p>
+                    <h3>Konklusjon</h3>
+                    <p>ChatGPT sa igjen mye av det samme som lighthouse og webaim. Derimot <br>
+                    gir GPT ofte mye mer detaljert begrunnelser, og man kan til og med <br>
+                    spørre videre om mer informasjon/fordypning. Derfor syns jeg at <br>
+                    ChatGPT er et nyttig verktøy når det kommer til analyse.</p>
+                </section>
+                <!--Secsjon for sammenlikning tabell-->
+                <section>
+                    <h2>Sammenlikning</h2>
+                    <p>Lighthouse, Webaim og ChatGPT sa mye av det samme, <br>
+                    men fokuset var ofte forskjellig. Som dere kan se under <br>
+                    har jeg satt opp hovedfokusene til hver av analysene.</p>
+                    <!--Code for table fetched from w3school-->
+                    <table id="table">
+                        <tr>
+                            <th>Lighthouse</th>
+                            <th>Webaim</th>
+                            <th>ChatGPT</th>
+                        </tr>
+                        <tr>
+                            <td>Dårlig kontrast</td>
+                            <td>Tomme labels og linker</td>
+                            <td>Manglet metadata</td>
+                        </tr>
+                    </table>
+                </section>
+                <!--Seksjon for endringer-->
+                <section>
+                    <h2>Endringer</h2>
+                    <p>Under vil dokumentasjon over alle endringene være.</p>
+                    <h3>Kontrast</h3>
+                    <p>For å fikse problemene med kontrast på nettsiden måtte jeg <br>
+                    endre på noen farger. Det var to farger som var problematiske: <br>
+                    1. lilla fargen på lenker var for lik den blå bakgrunnen.<br>
+                    2. blå fargen på bakgrunnen var for lys for hvit tekst.</p>
+                    <p>Jeg endret fargen på bakgrunnen til en mørkere blå, <br>
+                    deretter endret jeg fargen på alle lenker (a-tags) til svart.</p>
+
+                    <h3>Tomme tagger</h3>
+                    <p>Som forklart tidligere er problemene med tomme tagger <br>
+                    lett å fikse i teorien. Alt man må gjøre er å sette tekst <br>
+                    foran a-taggen. Jeg la til "search" foran timeglasset, og <br>
+                    "shop" foran handlekurven. Det gikk litt imot min originale <br>
+                    design visjon, men jeg syns det endte opp greit. Jeg måtte <br>
+                    endre farge på "shop" teksten fordi jeg hadde tidligere <br>
+                    endret alle linker. Derimot fungerte det ikke for mobil <br>
+                    og veldig lave skjermbredder. Jeg fikset det ved å <br>
+                    gjøre at teksten ikke vises på mobil. Det gjør teksnisk <br>
+                    sett at label problemet ikke er løst på mobil, men jeg <br>
+                    fant ingen måte å ha det uten at headeren ble helt ødelagt.</p>
                 </section>
             </section>
 
