@@ -54,14 +54,6 @@ header {
                 display: none;
             }
 
-            #search {
-                display: none;
-            }
-
-            #shop {
-                display: none;
-            }
-
     /* Central headline section within header */
     header section {
         display: flex;
@@ -372,14 +364,6 @@ footer {
                 display: flex;
                 border-radius: 50px;
                 margin-right: 1rem;
-            }
-
-            #search {
-                display: contents;
-            }
-
-            #shop {
-                display: contents;
             }
 
             header nav ul .kategori-link {

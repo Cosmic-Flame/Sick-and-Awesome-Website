@@ -6,21 +6,26 @@
     <!-- Metadata for character encoding and viewport settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Komfortable joggesko for menn, kvinner og barn. Finn de skoene du trenger">
-
+    <meta name="author" content="Vetle Stenvard Weme">
+    <meta name="description" content="Analyse over nettstedet 'Shoe4You'.">
+       
+    <!-- Additional Standard Metadata -->
+    <meta name="keywords" content="herresko, joggesko, sko, nike, sneakers">
+    <link rel="canonical" href="https://itstud.hiof.no/~vetlesw/Sick-and-Awesome-Website/analyse.html">
+    
     <!-- External stylesheet for normalization -->
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
-
+    
     <!-- Font awesome stylesheets -->
     <link href="css/font/css/fontawesome.css" rel="stylesheet">
     <link href="css/font/css/brands.css" rel="stylesheet">
     <link href="css/font/css/solid.css" rel="stylesheet">
-
+    
     <!-- Main stylesheet for the site -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
-
+    
     <!-- Website title -->
-    <title>Shoe4You</title>
+    <title>Analyse - En detaljert analyse av nettstedet Shoe4You</title>
 </head>
 
 <body>
@@ -37,16 +42,16 @@
                     <!-- Menu icon (for mobile view) -->
                     <i id="borgir" class="fa-solid fa-bars"></i>
                     <!-- Search icon -->
-                    <label for="searchbar">
-                        <span id="search">search</span><i class="fa-solid fa-magnifying-glass"></i>
+                    <label for="searchbar" aria-label="Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
                     </label>
                     <input id="searchbar" type="text" name="searchbar" >
                     <!-- Site logo -->
                     <a href="index.html" id="logo">Shoe4You</a>
                     <!-- User and cart icons -->
                     <i class="fa-solid fa-user"></i>
-                    <a href="handlekurv.html" class="shopping-cart">
-                        <span id="shop">shop</span><i class="fa-solid fa-cart-shopping"></i>
+                    <a href="handlekurv.html" class="shopping-cart" aria-label="Shopping Cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
                     </a>
                 </div>
 
@@ -219,6 +224,17 @@
                     bli nådd.</p>
                     <p>Jeg la også til en knapp for å hoppe direkte til hovedinnholdet.</p>
                 </section>
+                <section>
+                <!--Seksjon for skjermleser-->
+                    <h2>Skjermleser</h2>
+                    <p>Jeg brukte Google sin skjermleser extension, og WebAim <br>
+                    sin skjermleser funksjon. Skjermlesingen var ikke optimal. <br>
+                    Det var en del som ikke ble lest opp, og en del andre ting <br>
+                    som ble veldig unaturlig når det ble lest opp.</p>
+                    <p>Etter at ARIA og en del annet UU ble lagt til ble skjermlesingen <br>
+                    veldig forbedret. Jeg ville fortsatt ikke kalt det "bra", <br>
+                    men definitivt mye bedre enn det det var før.</p>
+                </section>
                 <!--Seksjon for endringer-->
                 <section>
                     <h2>Endringer</h2>
@@ -244,10 +260,21 @@
                     sett at label problemet ikke er løst på mobil, men jeg <br>
                     fant ingen måte å ha det uten at headeren ble helt ødelagt.</p>
 
+                    <h4>ARIA</h4>
+                    <p>Da jeg kom til ARIA stadiet fant jeg ut av aria-label taggen. <br>
+                    Det gjorde at jeg kunne legge til aria-labels istedenfor <br>
+                    å legge til faktisk teskt, som gjorde at jeg kunne beholde <br>
+                    mitt originale design konsept, og ikke trengte å ha synlig <br>
+                    tekst for å kunne ha labels for bl.a screenreaders. Dette <br>
+                    forbedret både designet og UU-verdien til nettsiden.</p>
+
                     <h3>Meta beskrivelse</h3>
                     <p>Jeg la til en meta description på toppen av nettsiden. <br>
                     Flere av analysene klaget på at jeg ikke hadde det, så <br>
                     det burde hjelpe å legge det til.</p>
+                    <p>Når jeg begynte på oppgave 4 og 5 ble det lagt til <br>
+                    my mer metadata. Etter å ha tatt det gjennom alle tre <br>
+                    analysene ble det godkjent av alle. Det samme gjelder Rich Results.</p>
 
                     <h3>Gå til hovedinnhold</h3>
                     <p>Jeg lagde en knapp på index.html som tar deg til <br>
