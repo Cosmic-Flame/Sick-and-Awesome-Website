@@ -17,7 +17,6 @@ a {
 
 .fa-cart-shopping {
     color: #fff;
-
 }
 
 .shopping-cart {
@@ -71,6 +70,11 @@ header {
         background-color: #ebebeb;
     }
 
+#btn-main-content {
+    padding: 0.5rem;
+    margin-top: 1rem;
+}
+
 #kategori-nyhet {
     text-align: center;
     background-color: #ebebeb;
@@ -104,7 +108,11 @@ header {
 table, th, td {
     border: 1px solid black;
     padding: 0.2rem;
-  }
+}
+
+section .white {
+    color: #fff;
+}
 
 /* Styling for news section */
 .nyhet section {
